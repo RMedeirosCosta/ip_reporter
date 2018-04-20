@@ -1,7 +1,5 @@
-#include <stdio.h>
 #include <string.h>
 #include "pcre.h"
-#include "er.h"
 
 char *get_arg(char *args, char *arg_name) {
   int ovector[100];
@@ -20,8 +18,9 @@ char *get_arg(char *args, char *arg_name) {
 		    NULL,
 		    0);
 
-  if (re == NULL)
-     return "FAIL";
+  if (re == NULL) {
+    return "FAIL";
+  } 
   
 rc = pcre_exec(
   re,                   /* the compiled pattern */

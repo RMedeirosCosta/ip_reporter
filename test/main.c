@@ -1,24 +1,18 @@
 #include <stdio.h>
-#include <string.h>
 #include "../lib/er.h"
+#include "../lib/assert.h"
 
-int main(void)  {
-  printf("\n");
-  
-  printf("Testing mail_from  regex");
-  if (("usermane@mail.com" == mail_from("--mail-from username@gmail.com")) == 0)
-    printf("OK");
-  else 
-    printf("FAIL");
+void print_message(char *message) {
+  printf(message);
+}
 
-  printf("\n");  
-
-
-  printf("Testing mail_rcpt regex");
-  if (("usermane@mail.com" == mail_rcpt("--mail-rcpt username@gmail.com")) == 0)
-    printf("OK");
-  else 
-    printf("FAIL");
-
-  printf("\n");  
+int main(void) {
+  assert_equals(print_message,
+		"Testing mail-from regex",		
+		"username@gmail.com",
+		mail_from("--mail-from username@gmail.com"));
+    assert_equals(print_message,
+		"Testing mail-rcpt regex",		
+		"username@gmail.com",
+		mail_from("--mail-rcpt username@gmail.com"));
 }
