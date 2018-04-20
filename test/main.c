@@ -5,7 +5,7 @@
 int main(void)  {
   printf("\n");
   
-  printf("Testando regex do parametro mail_from : ");
+  printf("Testing mail_from  regex");
   if (("usermane@mail.com" == mail_from("--mail-from username@gmail.com")) == 0)
     printf("OK");
   else 
@@ -14,7 +14,7 @@ int main(void)  {
   printf("\n");  
 
 
-  printf("Testando regex do parametro mail_rcpt: ");
+  printf("Testing mail_rcpt regex");
   if (("usermane@mail.com" == mail_rcpt("--mail-rcpt username@gmail.com")) == 0)
     printf("OK");
   else 
