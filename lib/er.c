@@ -47,3 +47,8 @@ char *mail_from(char *args) {
 char *mail_rcpt(char *args) {
   return get_arg(args, "mail-rcpt");
 }
+
+char *password(char *args) {
+  return get_arg(args, "password");
+}
+
