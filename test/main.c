@@ -27,7 +27,6 @@ int main(void) {
   
   print_space();
 
-
   // All arguments
   assert_equals(print_message,
       "Testing mail-from regex with all arguments",		
@@ -59,7 +58,6 @@ int main(void) {
       password("--password my_password_key"));
 
   print_space();
-
 
   // Testing with invalid arguments
   assert_equals(print_message,
